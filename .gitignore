@@ -1,0 +1,17 @@
+## 运行产物（每次重跑会变，不入库）
+outputs/
+data/raw/
+data/processed/*.rds
+
+## 但同源映射表必须入库：它是可复现性的关键依赖，
+## 有了它后续任何一次重跑都不会因 Ensembl 版本漂移而改变结论。
+!data/processed/ortholog_*_to_*.rds
+
+## 基因集体积较大（GO_BP 4.6M），但为可复现性一并入库
+## 若仓库体积敏感，可改为运行时用 make_gmt.R 重新生成
+
+## 系统文件
+.DS_Store
+.Rhistory
+.RData
+*.log

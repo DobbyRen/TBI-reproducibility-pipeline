@@ -1,0 +1,7 @@
+﻿gse,species,tissue,data_type,group_col,control_level,case_level,patient_col,batch_col,paired,time_window,pmid,reported_de_n,claimed_genes,n_per_group,origin_batch_correction,n_datasets_used,external_validation_reported,hub_algorithm_prespecified,pub_year,notes
+GSE104687,human,post_mortem_brain,array,"characteristics_ch1.1","control","tbi",NA,NA,FALSE,NA,28227599,NA,,,,TRUE,FALSE,FALSE,2017,"多脑区；请先确认分组字段与水平取值，必要时按脑区分层各跑一次"
+GSE89866,human,peripheral_blood,array,"characteristics_ch1.1","control","tbi","geo_accession",NA,TRUE,NA,28319077,NA,,,,FALSE,FALSE,FALSE,2017,"暴露前后配对设计；patient_col 需替换为真实的受试者编号列"
+GSE2871,rat,brain,array,"characteristics_ch1.1","control","injured",NA,NA,FALSE,"4h",15729345,NA,,,,FALSE,FALSE,FALSE,2005,"含 4h/24h 时间点；同一 GSE 内不同时间点应拆成独立分析单元"
+GSE45997,rat,hippocampus,array,"characteristics_ch1.1","control","injured",NA,NA,FALSE,NA,24333317,NA,,,,FALSE,FALSE,FALSE,2013,"动物验证集"
+GSE269748,mouse,brain,rnaseq,"characteristics_ch1.1","control","injured",NA,NA,FALSE,NA,NA,NA,,,,FALSE,FALSE,FALSE,2024,"单细胞 24h/7d/6m；需先按细胞类型或样本做 pseudobulk 聚合再进入本流水线"
+GSE160763,mouse,brain,rnaseq,"characteristics_ch1.1","control","injured",NA,NA,FALSE,NA,NA,NA,,,,FALSE,FALSE,FALSE,2021,"单细胞；同上需 pseudobulk"
