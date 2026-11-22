@@ -46,6 +46,35 @@ patient_level_split <- function(pheno, prop = FROZEN$split_prop,
 ## ---- 双层拆分差异表达 ----
 dual_fold_de <- function(obj, data_type = "array", paired = FALSE, seed) {
   sp <- patient_level_split(obj$pheno, seed = seed)
+
+  ## ---- 可行性检查（2026-10-27 修复，见台账 A-2026-10-27-02）----
+  ## 症状：GSE45997（3 vs 3）按 split_prop 分层拆分后每折只剩 1 case + 1 control，
+  ##       lmFit 设计 ~y 占 2 个系数 → 残差自由度 = 0 →
+  ##       limma::eBayes 抛 "No finite residual standard deviations"，整条 run_all 中断。
+  ## 判据：任一折的任一组样本数 < 2 → 该数据集【不做】双层拆分，
+  ##       返回 feasible = FALSE（不是报错、不是跳过分析，而是如实标记不可行）。
+  ## 理由：内部双层拆分需要每折都能独立估计方差；n 不足时任何拆分结果都不可解释。
+  fold_ok <- function(idx) {
+    ph <- obj$pheno[idx, , drop = FALSE]
+    min(sum(ph$group == 1L), sum(ph$group == 0L)) >= 2L
+  }
+  if (!fold_ok(sp$fold1) || !fold_ok(sp$fold2)) {
+    full <- run_de(obj, data_type = data_type, paired = paired)
+    return(list(feasible = FALSE,
+                reason = "拆分后某折某组样本数 <2，残差自由度为 0，无法估计方差",
+                n_fold1 = length(sp$fold1), n_fold2 = length(sp$fold2),
+                n_case_fold1 = sum(obj$pheno$group[sp$fold1] == 1L),
+                n_ctrl_fold1 = sum(obj$pheno$group[sp$fold1] == 0L),
+                n_case_fold2 = sum(obj$pheno$group[sp$fold2] == 1L),
+                n_ctrl_fold2 = sum(obj$pheno$group[sp$fold2] == 0L),
+                internal_set = character(0),
+                n_intersect = 0L, n_concordant = 0L,
+                n_full = length(primary_de(full)),
+                prop_survived = NA_real_,
+                split = sp, full_stats = full,
+                full_set = primary_de(full)))
+  }
+
   res1 <- run_de(list(mat = obj$mat[, sp$fold1, drop = FALSE],
                       pheno = obj$pheno[sp$fold1, , drop = FALSE]),
                  data_type = data_type, paired = paired)
@@ -65,6 +94,8 @@ dual_fold_de <- function(obj, data_type = "array", paired = FALSE, seed) {
   keep <- both[d1 == d2 & d1 != 0]
 
   list(
+    feasible = TRUE,
+    reason = NA_character_,
     internal_set = keep,
     n_fold1 = length(s1), n_fold2 = length(s2),
     n_intersect = length(both), n_concordant = length(keep),

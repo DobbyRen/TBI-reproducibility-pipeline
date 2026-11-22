@@ -146,16 +146,43 @@ preprocess_unified <- function(mat, pheno, ann = NULL,
   steps$n_genes_collapsed      <- cp$n_collapsed
 
   ## (iii) 变换
-  mat <- log2_if_needed(mat, audit$needs_log2)
-  steps$transformation <- if (audit$needs_log2) "log2(x+1)" else "none"
+  ## 【2026-10-27 缺陷修复 #5，最严重】count 尺度【不做 log2】。
+  ##   下游 run_de_rnaseq (DESeq2) 用负二项模型对【原始整数计数】建模；
+  ##   若此处先 log2(x+1)，04 里的 round() 会把计数语义彻底毁掉
+  ##   —— 实测 GSE269748：错误路径（喂 log2 值）237 个 DEG，
+  ##      正确路径（喂原始 counts）数量级完全不同，且 logFC 被压缩到 <1。
+  ##   linear（线性 FPKM / 芯片强度）仍须 log2 —— 它走 array 分支（limma）。
+  ##   不改动 FROZEN（00_config.R 未动，MD5 不变），只改消费方式。
+  if (audit$inferred == "count") {
+    steps$transformation <- "none (raw counts preserved for DESeq2)"
+  } else {
+    mat <- log2_if_needed(mat, audit$needs_log2)
+    steps$transformation <- if (audit$needs_log2) "log2(x+1)" else "none"
+  }
 
   ## (iv) 过滤
+  ## 【2026-10-26 缺陷修复 #4】FROZEN$filter_floor 的三个取值是【输入尺度】的下限
+  ##   （log_scale=4 / linear=16 / count=16），而过滤在 (iii) 变换【之后】执行。
+  ##   原代码直接拿 audit$floor 去比 log2 后的值：线性芯片 log2 上限约 15.5 < 16
+  ##   → 全部基因被滤掉（GSE45997 实测 14,378 → 0，DE 直接崩）。
+  ##   修复：linear 时把下限换算到同一尺度 floor' = log2(floor + 1)
+  ##   （16 → log2(17) = 4.0875，与 log_scale 的 4 语义一致，即"线性 ≈16"）。
+  ##   ⚠️ count 尺度【不换算】：按缺陷 #5 修复后 count 不再变换，
+  ##      过滤就在原始计数尺度上比，floor=16 正是 FROZEN 的原意。
+  floor_use <- audit$floor
+  if (audit$needs_log2 && audit$inferred != "count") floor_use <- log2(audit$floor + 1)
   n_before <- nrow(mat)
-  mat <- filter_by_expression(mat, pheno$group, FROZEN$filter_min_frac, audit$floor)
-  steps$filter_floor <- audit$floor
+  mat <- filter_by_expression(mat, pheno$group, FROZEN$filter_min_frac, floor_use)
+  steps$filter_floor              <- round(floor_use, 4)
+  steps$filter_floor_input_scale  <- audit$floor
+  steps$filter_floor_converted    <- audit$needs_log2
   steps$filter_min_frac <- FROZEN$filter_min_frac
   steps$n_genes_before_filter <- n_before
   steps$n_genes_after_filter  <- nrow(mat)
+  if (nrow(mat) == 0L) {
+    warning("[preprocess] 过滤后基因为 0（floor=", round(floor_use, 3),
+            "，尺度=", audit$inferred, "）—— 请核对输入尺度与 FROZEN$filter_floor")
+  }
 
   ## (v) 批次
   pheno <- pheno[match(colnames(mat), pheno$sample_id), , drop = FALSE]

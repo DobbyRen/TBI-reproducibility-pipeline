@@ -1,0 +1,248 @@
+﻿study_id,species,tier,gene_symbol_raw,exclude_datasets,note
+S001,human,primary,APOE,,摘要与结论原序的 11 个候选/hub 基因
+S001,human,primary,S100B,,摘要与结论原序的 11 个候选/hub 基因
+S001,human,primary,GFAP,,摘要与结论原序的 11 个候选/hub 基因
+S001,human,primary,BDNF,,摘要与结论原序的 11 个候选/hub 基因
+S001,human,primary,AQP4,,摘要与结论原序的 11 个候选/hub 基因
+S001,human,primary,COMT,,摘要与结论原序的 11 个候选/hub 基因
+S001,human,primary,MBP,,摘要与结论原序的 11 个候选/hub 基因
+S001,human,primary,UCHL1,,摘要与结论原序的 11 个候选/hub 基因
+S001,human,primary,DRD2,,摘要与结论原序的 11 个候选/hub 基因
+S001,human,primary,ASIC1,,摘要与结论原序的 11 个候选/hub 基因
+S001,human,primary,CACNA1A,,摘要与结论原序的 11 个候选/hub 基因
+S002,mouse,primary,DISC1,GSE2871,Table 3 'Novel protein indicators' 3 个（均属抑制子网络，下调）；PSD95 亦名 DLG4
+S002,mouse,primary,PSD95,GSE2871,Table 3 'Novel protein indicators' 3 个（均属抑制子网络，下调）；PSD95 亦名 DLG4
+S002,mouse,primary,NOS1,GSE2871,Table 3 'Novel protein indicators' 3 个（均属抑制子网络，下调）；PSD95 亦名 DLG4
+S002,mouse,secondary,MAPT,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,UCHL1,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,MBP,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,HSPA4,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,CYCS,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,BCL2,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,IL6,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,APP,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,CASP7,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,CASP9,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,BDKRB1,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S002,mouse,secondary,BDKRB2,GSE2871,同表 'Previously identified candidates'（本研究回收的既往候选，非本研究新结论）
+S003,mouse,primary,Igfbp7,,三数据集一致调控的核心 3 基因（IGFBP7 为摘要/讨论结论标志物）
+S003,mouse,primary,Fxyd5,,三数据集一致调控的核心 3 基因（IGFBP7 为摘要/讨论结论标志物）
+S003,mouse,primary,Itm2a,,三数据集一致调控的核心 3 基因（IGFBP7 为摘要/讨论结论标志物）
+S005,rat,primary,ICAM1,,讨论结论原句点名 6 个（原文 IL-1β 规范化为 IL1B）
+S005,rat,primary,CXCL10,,讨论结论原句点名 6 个（原文 IL-1β 规范化为 IL1B）
+S005,rat,primary,TLR2,,讨论结论原句点名 6 个（原文 IL-1β 规范化为 IL1B）
+S005,rat,primary,CCL2,,讨论结论原句点名 6 个（原文 IL-1β 规范化为 IL1B）
+S005,rat,primary,CXCL1,,讨论结论原句点名 6 个（原文 IL-1β 规范化为 IL1B）
+S005,rat,primary,IL1B,,讨论结论原句点名 6 个（原文 IL-1β 规范化为 IL1B）
+S005,rat,secondary,IL6,,Table 4 三时间点 cytoHubba degree 前 10 的并集（去 IL1B/CCL2/TLR2/ICAM1/CXCL1/CXCL10 重复）
+S005,rat,secondary,TNF,,Table 4 三时间点 cytoHubba degree 前 10 的并集（去 IL1B/CCL2/TLR2/ICAM1/CXCL1/CXCL10 重复）
+S005,rat,secondary,FOS,,Table 4 三时间点 cytoHubba degree 前 10 的并集（去 IL1B/CCL2/TLR2/ICAM1/CXCL1/CXCL10 重复）
+S005,rat,secondary,PTGS2,,Table 4 三时间点 cytoHubba degree 前 10 的并集（去 IL1B/CCL2/TLR2/ICAM1/CXCL1/CXCL10 重复）
+S005,rat,secondary,STAT3,,Table 4 三时间点 cytoHubba degree 前 10 的并集（去 IL1B/CCL2/TLR2/ICAM1/CXCL1/CXCL10 重复）
+S005,rat,secondary,MMP9,,Table 4 三时间点 cytoHubba degree 前 10 的并集（去 IL1B/CCL2/TLR2/ICAM1/CXCL1/CXCL10 重复）
+S005,rat,secondary,CXCL2,,Table 4 三时间点 cytoHubba degree 前 10 的并集（去 IL1B/CCL2/TLR2/ICAM1/CXCL1/CXCL10 重复）
+S005,rat,secondary,STAT1,,Table 4 三时间点 cytoHubba degree 前 10 的并集（去 IL1B/CCL2/TLR2/ICAM1/CXCL1/CXCL10 重复）
+S005,rat,secondary,IRF7,,Table 4 三时间点 cytoHubba degree 前 10 的并集（去 IL1B/CCL2/TLR2/ICAM1/CXCL1/CXCL10 重复）
+S005,rat,secondary,IRF1,,Table 4 三时间点 cytoHubba degree 前 10 的并集（去 IL1B/CCL2/TLR2/ICAM1/CXCL1/CXCL10 重复）
+S006,human,primary,AKR1C2,GSE104687,Random Forest Gini 前 5 的 key genes
+S006,human,primary,QDPR,GSE104687,Random Forest Gini 前 5 的 key genes
+S006,human,primary,CYP3A5,GSE104687,Random Forest Gini 前 5 的 key genes
+S006,human,primary,CNTF,GSE104687,Random Forest Gini 前 5 的 key genes
+S006,human,primary,PNPT1,GSE104687,Random Forest Gini 前 5 的 key genes
+S008,mouse,primary,Myd88,,cytoHubba degree 最高的 5 个 hub mRNA
+S008,mouse,primary,Tnfrsf1b,,cytoHubba degree 最高的 5 个 hub mRNA
+S008,mouse,primary,Cd1d1,,cytoHubba degree 最高的 5 个 hub mRNA
+S008,mouse,primary,Itgam,,cytoHubba degree 最高的 5 个 hub mRNA
+S008,mouse,primary,Irf1,,cytoHubba degree 最高的 5 个 hub mRNA
+S008,mouse,secondary,Igfbp3,,Neat1 亚网络（凋亡/炎症）与 qRT-PCR 验证的 mRNA
+S008,mouse,secondary,Spp1,,Neat1 亚网络（凋亡/炎症）与 qRT-PCR 验证的 mRNA
+S008,mouse,secondary,Krt16,,Neat1 亚网络（凋亡/炎症）与 qRT-PCR 验证的 mRNA
+S008,mouse,secondary,Sele,,Neat1 亚网络（凋亡/炎症）与 qRT-PCR 验证的 mRNA
+S008,mouse,secondary,Cxcr2,,Neat1 亚网络（凋亡/炎症）与 qRT-PCR 验证的 mRNA
+S008,mouse,secondary,Mmp12,,Neat1 亚网络（凋亡/炎症）与 qRT-PCR 验证的 mRNA
+S008,mouse,secondary,Hes5,,Neat1 亚网络（凋亡/炎症）与 qRT-PCR 验证的 mRNA
+S008,mouse,secondary,P2ry12,,Neat1 亚网络（凋亡/炎症）与 qRT-PCR 验证的 mRNA
+S009,human,primary,RPS4Y1,GSE104687,cytoHubba 五算法交集的 3 个 hub 基因；KDM5D 为结论级标志物
+S009,human,primary,KDM5D,GSE104687,cytoHubba 五算法交集的 3 个 hub 基因；KDM5D 为结论级标志物
+S009,human,primary,NLGN4Y,GSE104687,cytoHubba 五算法交集的 3 个 hub 基因；KDM5D 为结论级标志物
+S010,human,primary,RPL27,GSE89866;GSE104687,5 个 hub 基因（核糖体蛋白亚基），原文均下调
+S010,human,primary,RPS4X,GSE89866;GSE104687,5 个 hub 基因（核糖体蛋白亚基），原文均下调
+S010,human,primary,RPL23A,GSE89866;GSE104687,5 个 hub 基因（核糖体蛋白亚基），原文均下调
+S010,human,primary,RPS15A,GSE89866;GSE104687,5 个 hub 基因（核糖体蛋白亚基），原文均下调
+S010,human,primary,RPL7A,GSE89866;GSE104687,5 个 hub 基因（核糖体蛋白亚基），原文均下调
+S011,rat,primary,Tnf,GSE2871,摘要末句结论级 hub 基因（原文 Tnf-α 规范化为 Tnf、c-Myc 规范化为 Myc）
+S011,rat,primary,Myc,GSE2871,摘要末句结论级 hub 基因（原文 Tnf-α 规范化为 Tnf、c-Myc 规范化为 Myc）
+S011,rat,primary,Spp1,GSE2871,摘要末句结论级 hub 基因（原文 Tnf-α 规范化为 Tnf、c-Myc 规范化为 Myc）
+S011,rat,primary,Cxcl10,GSE2871,摘要末句结论级 hub 基因（原文 Tnf-α 规范化为 Tnf、c-Myc 规范化为 Myc）
+S011,rat,primary,Ptprc,GSE2871,摘要末句结论级 hub 基因（原文 Tnf-α 规范化为 Tnf、c-Myc 规范化为 Myc）
+S011,rat,primary,Egf,GSE2871,摘要末句结论级 hub 基因（原文 Tnf-α 规范化为 Tnf、c-Myc 规范化为 Myc）
+S011,rat,primary,Mmp9,GSE2871,摘要末句结论级 hub 基因（原文 Tnf-α 规范化为 Tnf、c-Myc 规范化为 Myc）
+S011,rat,primary,Lcn2,GSE2871,摘要末句结论级 hub 基因（原文 Tnf-α 规范化为 Tnf、c-Myc 规范化为 Myc）
+S011,rat,primary,Fn1,GSE2871,摘要末句结论级 hub 基因（原文 Tnf-α 规范化为 Tnf、c-Myc 规范化为 Myc）
+S011,rat,primary,Nox4,GSE2871,摘要末句结论级 hub 基因（原文 Tnf-α 规范化为 Tnf、c-Myc 规范化为 Myc）
+S011,rat,secondary,Hnf4a,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Cyp24a1,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Itga8,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Itih4,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Tdo2,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Lama1,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Tgfb1,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Hspa1a,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Ccl2,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Traf2,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Abcc2,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Psma5,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Hmox1,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Krt18,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Il1b,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Cd74,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Hspb1,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Cd38,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Gfap,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Lgals3,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Plek,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Timp1,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Cxcl1,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Irf8,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Cdk1,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Lyn,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Cyba,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S011,rat,secondary,Bmp2,GSE2871,4 h 与 24 h 两组 Top 20 hub 基因并集（去重后）
+S012,human,primary,NFE2L2,,cytoHubba 七算法交集唯一 hub 基因
+S012,human,secondary,EP300,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,JUN,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,TNFRSF10B,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,TP53,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,GSK3B,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,BCL2L1,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,AIFM1,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,CXCL8,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,BAX,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,BCL2,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,PRKN,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,PDIA3,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,THBS1,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,BBC3,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,ERN1,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,BCL2L11,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,HSPA1A,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S012,human,secondary,ATF3,,Table 1 的 19 个 crosstalk genes（TBI ∩ 内质网应激，去 NFE2L2）
+S013,rat,primary,Aif1,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Csf1r,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Trem2,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Tyrobp,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,C1qa,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,C1qb,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,C1qc,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Cd74,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Ctss,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Arhgdib,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Cd53,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Laptm5,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Fcer1g,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Fcgr2b,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,primary,Ptpn6,,Top 15 hub genes（CytoHubba MCC，两数据集共同上调）
+S013,rat,secondary,Ifngr1,,免疫相关 DEG 与差异表达 TF 共因子
+S013,rat,secondary,Unc93b1,,免疫相关 DEG 与差异表达 TF 共因子
+S013,rat,secondary,Lgmn,,免疫相关 DEG 与差异表达 TF 共因子
+S013,rat,secondary,Grn,,免疫相关 DEG 与差异表达 TF 共因子
+S013,rat,secondary,Anxa2,,免疫相关 DEG 与差异表达 TF 共因子
+S013,rat,secondary,Isg15,,免疫相关 DEG 与差异表达 TF 共因子
+S013,rat,secondary,Pycard,,免疫相关 DEG 与差异表达 TF 共因子
+S013,rat,secondary,Aebp1,,免疫相关 DEG 与差异表达 TF 共因子
+S014,human,primary,VNN1,,上调 3 + 下调 4 的 hub genes（Results 与 Fig.4 图注逐字）
+S014,human,primary,SERPINB2,,上调 3 + 下调 4 的 hub genes（Results 与 Fig.4 图注逐字）
+S014,human,primary,ETFDH,,上调 3 + 下调 4 的 hub genes（Results 与 Fig.4 图注逐字）
+S014,human,primary,FLT3LG,,上调 3 + 下调 4 的 hub genes（Results 与 Fig.4 图注逐字）
+S014,human,primary,DYRK1A,,上调 3 + 下调 4 的 hub genes（Results 与 Fig.4 图注逐字）
+S014,human,primary,DCN,,上调 3 + 下调 4 的 hub genes（Results 与 Fig.4 图注逐字）
+S014,human,primary,FKBP8,,上调 3 + 下调 4 的 hub genes（Results 与 Fig.4 图注逐字）
+S015,human,primary,IL1B,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,STAT3,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,TGFB1,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,MYC,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,IFNG,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,ESR1,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,BCL2,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,SIRT1,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,GSK3B,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,MAPK1,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,SREBF1,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,SERPINE1,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,TNFRSF1A,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,CYCS,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S015,human,primary,CASP8,GSE104687;GSE89866,Top 15 hub CRRGs（cytoHubba Degree）
+S017,human,primary,ATP2A2,,韦恩交集所得 2 个核心靶点（原文 AUC>0.80、TCE 组表达降低）
+S017,human,primary,ATP2C1,,韦恩交集所得 2 个核心靶点（原文 AUC>0.80、TCE 组表达降低）
+S018,mouse,primary,Anxa2,,结论级点名的唯一基因 Anxa2（Abstract/Discussion/4.5 节标题三处逐字）
+S019,mouse,primary,Pgk1,,结论级点名的 4 个 hub 基因（PGK1/PK M/HIF-1α/MYC；20 个 hub 的其余符号原文未逐字列出）
+S019,mouse,primary,Pkm,,结论级点名的 4 个 hub 基因（PGK1/PK M/HIF-1α/MYC；20 个 hub 的其余符号原文未逐字列出）
+S019,mouse,primary,Hif1a,,结论级点名的 4 个 hub 基因（PGK1/PK M/HIF-1α/MYC；20 个 hub 的其余符号原文未逐字列出）
+S019,mouse,primary,Myc,,结论级点名的 4 个 hub 基因（PGK1/PK M/HIF-1α/MYC；20 个 hub 的其余符号原文未逐字列出）
+S020,human,primary,NQO1,GSE104687,4 个 FDTRDEGs / KeyGenes（NQO1、VCP 下调；RELA、PML 上调）
+S020,human,primary,VCP,GSE104687,4 个 FDTRDEGs / KeyGenes（NQO1、VCP 下调；RELA、PML 上调）
+S020,human,primary,PML,GSE104687,4 个 FDTRDEGs / KeyGenes（NQO1、VCP 下调；RELA、PML 上调）
+S020,human,primary,RELA,GSE104687,4 个 FDTRDEGs / KeyGenes（NQO1、VCP 下调；RELA、PML 上调）
+S021,human,primary,ACSM5,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,ADAM28,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,ANKFN1,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,CCDC163P,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,COLCA1,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,FMNL3,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,LOC105371645,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,NPL,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,ORAI3,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,RIN2,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,PTPN18,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S021,human,primary,ZHX3,GSE104687,genes of interest 10 个 + 各模块 primary hub 3 个（去重后 12）；Allen/ACT 队列与 GSE104687 同源，故排除
+S022,mouse,primary,S100a8,GSE269748,TBI 组上调的中性粒细胞相关转录本（结论级差异表达陈述）
+S022,mouse,primary,S100a9,GSE269748,TBI 组上调的中性粒细胞相关转录本（结论级差异表达陈述）
+S022,mouse,primary,G0s2,GSE269748,TBI 组上调的中性粒细胞相关转录本（结论级差异表达陈述）
+S022,mouse,primary,Retnlg,GSE269748,TBI 组上调的中性粒细胞相关转录本（结论级差异表达陈述）
+S022,mouse,primary,Acod1,GSE269748,TBI 组上调的中性粒细胞相关转录本（结论级差异表达陈述）
+S022,mouse,secondary,Fpr1,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Slfn4,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Sqstm1,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Wfdc17,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Wfdc21,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,F630028O10Rik,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Gm5483,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Isg15,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Oasl2,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Isg20,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Ifitm3,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Cstb,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Ftl1,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Psap,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Atf3,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Spp1,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Ifitm2,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Igfbp6,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Pglyrp1,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Dusp2,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Tnf,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S022,mouse,secondary,Irf1,GSE269748,四亚群 top5 marker 与 C1 亚群 DEG、词云点名基因
+S023,rat,primary,Serpina3n,,Top 10 DEG（按 P 值最小，摘要与讨论重复）
+S023,rat,primary,Asf1b,,Top 10 DEG（按 P 值最小，摘要与讨论重复）
+S023,rat,primary,Folr1,,Top 10 DEG（按 P 值最小，摘要与讨论重复）
+S023,rat,primary,LOC100366216,,Top 10 DEG（按 P 值最小，摘要与讨论重复）
+S023,rat,primary,Clec12a,,Top 10 DEG（按 P 值最小，摘要与讨论重复）
+S023,rat,primary,Olr1,,Top 10 DEG（按 P 值最小，摘要与讨论重复）
+S023,rat,primary,Timp1,,Top 10 DEG（按 P 值最小，摘要与讨论重复）
+S023,rat,primary,Hspb1,,Top 10 DEG（按 P 值最小，摘要与讨论重复）
+S023,rat,primary,Lcn2,,Top 10 DEG（按 P 值最小，摘要与讨论重复）
+S023,rat,primary,Spp1,,Top 10 DEG（按 P 值最小，摘要与讨论重复）
+S023,rat,secondary,Hmox1,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Mif,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Anxa2,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Gfap,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Cd9,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Gja1,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Pdpn,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Gpx1,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Tyrobp,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Cx3cr1,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Grn,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Trem2,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,C1qa,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）
+S023,rat,secondary,Aif1,,损伤反应模块 9 个 + 小胶质活化模块 6 个（去重）

@@ -17,7 +17,9 @@
 ## ---- 0. 参数 ----
 args <- commandArgs(trailingOnly = TRUE)
 RUN_MODE <- if (length(args) >= 1) args[1] else "synthetic"
-PREVALENCE_TARGET <- NULL     # 论文需给出目标患病率（如急诊 CT 阳性率），此处留 NULL
+## 目标患病率：注册方案写定值 0.07（急诊 CT 阳性率量级），2026-10-26 执行日填入。
+## 注意：此变量在 run_all.R（运行入口），不在冻结的 00_config.R，改动不影响注册哈希。
+PREVALENCE_TARGET <- 0.07
 
 ## 注意：必须先 source 再建目录——ensure_dirs() 定义在 01_utils.R 里
 for (f in c("00_config.R", "01_utils.R", "02_io.R", "03_preprocess.R",
@@ -164,9 +166,15 @@ for (nm in names(processed)) {
 
 stab_tab <- do.call(rbind, lapply(names(stability), function(nm) {
   s <- stability[[nm]]
+  ## feasible = FALSE：该数据集拆分后无法估计方差（见 05_stability.R 可行性检查）
+  ## → 双层拆分结果不可得，如实留空；不得用未拆分的全量集合冒充"内部稳定基因"
   data.frame(dataset_id = nm,
+             feasible = isTRUE(s$feasible),
+             reason = if (isTRUE(s$feasible)) NA_character_ else s$reason,
              n_full_de = s$n_full,
              n_fold1 = s$n_fold1, n_fold2 = s$n_fold2,
+             n_case_fold1 = if (is.null(s$n_case_fold1)) NA_integer_ else s$n_case_fold1,
+             n_ctrl_fold1 = if (is.null(s$n_ctrl_fold1)) NA_integer_ else s$n_ctrl_fold1,
              n_intersect = s$n_intersect, n_concordant = s$n_concordant,
              prop_survived = s$prop_survived,
              stringsAsFactors = FALSE)
@@ -178,6 +186,9 @@ if (length(stats_list) >= 2L) {
   nms <- names(stats_list)
   neg <- list()
   for (a in nms) {
+    ## 不可行的数据集没有 internal_set，跳过它作为"内部稳定基因"来源，
+    ## 但它仍可作为外部验证方（stats_list[[b]]）
+    if (!isTRUE(stability[[a]]$feasible)) next
     for (b in setdiff(nms, a)) {
       universe <- stats_list[[a]]$gene
       rd <- size_matched_draw(universe, length(stability[[a]]$internal_set),
@@ -283,7 +294,14 @@ if (length(gmt_files) > 0L && length(stats_list) >= 2L) {
 ## =====================================================================
 if (length(processed) >= 2L) {
   nms <- names(processed)
-  disc <- nms[1]; ext <- nms[2]
+  ## 发现集必须是双层拆分【可行】的数据集，否则没有 internal_set 可用
+  feas <- nms[vapply(nms, function(z) isTRUE(stability[[z]]$feasible), logical(1))]
+  if (length(feas) == 0L) feas <- nms
+  disc <- feas[1]
+  ext  <- setdiff(nms, disc)[1]
+  if (length(feas) < length(nms))
+    message("[run] 双层拆分不可行的数据集：",
+            paste(setdiff(nms, feas), collapse = ", "), "（不作为发现集）")
   feat <- intersect(stability[[disc]]$internal_set, stats_list[[ext]]$gene)
   message("[run] L7：发现集 ", disc, " → 外部集 ", ext, "；特征数 = ", length(feat))
 

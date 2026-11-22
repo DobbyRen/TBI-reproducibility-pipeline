@@ -1,0 +1,20 @@
+{
+  "creators": [
+    {"name": "Ren, Qingqing", "affiliation": "Department of Emergency, West China Hospital, Sichuan University, Chengdu, China"},
+    {"name": "Liao, Dengyong", "affiliation": "Department of Emergency, West China Hospital, Sichuan University, Chengdu, China"},
+    {"name": "Ren, Xingying", "affiliation": "Department of Emergency, West China Hospital, Sichuan University, Chengdu, China"},
+    {"name": "Wu, Ruoxi", "affiliation": "Department of Emergency, West China Hospital, Sichuan University, Chengdu, China"},
+    {"name": "Yu, Haifang", "affiliation": "Department of Emergency, West China Hospital, Sichuan University, Chengdu, China"}
+  ],
+  "title": "TBI reproducibility pipeline: frozen reanalysis of six public transcriptomic datasets",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "language": "eng",
+  "description": "R pipeline for the preregistered systematic reanalysis (OSF DOI 10.17605/OSF.IO/GFDJR). Frozen parameters are in 00_config.R; the archived release contains the code actually executed, including the 26-27 October 2026 input-scale and split-feasibility fixes, the gene-level statistics, H5 literature-check and figure scripts, and the corresponding input tables.",
+  "keywords": ["traumatic brain injury", "transcriptomics", "reproducibility", "meta-research", "R"],
+  "related_identifiers": [
+    {"identifier": "10.17605/OSF.IO/GFDJR", "relation": "isSupplementTo", "resource_type": "other"}
+  ]
+}

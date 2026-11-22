@@ -32,6 +32,15 @@ run_de_rnaseq <- function(counts, pheno, paired = FALSE) {
     return(run_de_voom(counts, pheno, paired = paired))
   }
   counts <- round(as.matrix(counts))
+  ## 【2026-10-27 防御性断言】DESeq2 必须吃原始整数计数。
+  ## 若上游误把 log2 变换后的矩阵传进来（缺陷 #5 的形态），
+  ## 典型特征是 max 很小（<100）而矩阵行数上万 —— 这里直接停下，
+  ## 绝不静默地把压缩过的数值当计数跑完再当结果用。
+  if (max(counts, na.rm = TRUE) < 100 && nrow(counts) > 500) {
+    stop("[de] run_de_rnaseq 收到的矩阵疑似已 log2 变换（max = ",
+         round(max(counts, na.rm = TRUE), 2), "）：DESeq2 需要原始整数计数。",
+         "请检查 03_preprocess.R 是否对 count 尺度做了 log2。")
+  }
   grp <- factor(ifelse(pheno$group == 1L, "case", "ctrl"), levels = c("ctrl", "case"))
   cdat <- data.frame(row.names = colnames(counts), group = grp)
   if (paired && !is.null(pheno$patient)) {
